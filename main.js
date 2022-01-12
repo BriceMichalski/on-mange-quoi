@@ -5,9 +5,26 @@ const food_list = [
     "poutine",
     "sushi",
     "pad thai",
+    "pizza",
+    "salade ... mais pas ouf"
 ]
 
-const shuffledArray = food_list.sort((a, b) => 0.5 - Math.random());
-const choice = shuffledArray[0]
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-document.getElementById("choice").innerHTML = choice;
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function choose(){
+    const shuffledArray = shuffle(food_list)
+    const choice = shuffledArray[0]
+    document.getElementById("choice").innerHTML = capitalizeFirstLetter(choice);
+}
+
+choose()
