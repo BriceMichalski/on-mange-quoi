@@ -1,35 +1,29 @@
 <template >
-  <v-container class="fullscreen">
+  <v-container>
     <v-row align="center"
       justify="center"
-      height="100%"
-      class="fullscreen color"
     >
-      <v-col col-md="4" col-xs="1"></v-col>
-      <v-col col-md="4" col-xs="10" height="100%" >
-        <v-card
-          elevation="2"
-          outlined
-          align="center"
-        >
-          <v-card-title
-            class="headline justify-center choicecard"
-            width="100%"
-          >
-            On mange ...
-          </v-card-title>
+    <v-card
+      class="mt-10"
+      elevation="2"
+      outlined
+      align="center"
+      width="80%"
+    >
+      <p class="mt-10 mb-10">
+        <b id="choice">{{ choice }}</b>
+      </p>
 
-          <p id="choicezone">
-            <b id="choice">{{ choice }}</b>
-          </p>
+    </v-card>
 
-          <v-card-actions class="justify-center">
-            <v-btn  @click="choose" color="secondary">Berk ... t'as pas autre chose ?</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col col-md="4" col-xs="1"></v-col>
-    </v-row>    
+    </v-row> 
+    <v-footer app bottom absolute color="transparent">
+      <v-container>
+        <div align="center">
+          <v-btn elevation="2" @click="choose" color="secondary">Berk ... t'as pas autre chose ?</v-btn>
+        </div>
+      </v-container>
+    </v-footer>
 
   </v-container>
 </template>
@@ -64,21 +58,5 @@
 <style scoped>
 #choice{
   font-size: 6vh;
-}
-
-#choicezone{
-  width: 80%;
-  height: 80%;
-  margin-top:10vh;
-  margin-bottom: 10vh;
-}
-
-.fullscreen {
-  height: 90vh;
-}
-
-.choicecard{
-  width: 100%;
-  height: 10vh;
 }
 </style>
