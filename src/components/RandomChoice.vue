@@ -63,7 +63,7 @@
 
 <style scoped>
 #choice{
-  font-size: 8vw;
+  font-size: 6vh;
 }
 
 #choicezone{
