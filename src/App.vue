@@ -19,7 +19,7 @@
         <h1>On Mange Quoi ?</h1>
       </div>
       <v-spacer></v-spacer>
-      <a href="https://github.com/BriceMichalski/on-mange-quoi">
+      <a href="https://github.com/BriceMichalski/on-mange-quoi" target="_blank">
         <v-img
           alt="github"
           class="shrink"
