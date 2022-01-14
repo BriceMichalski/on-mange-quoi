@@ -18,8 +18,19 @@
 
         <h1>On Mange Quoi ?</h1>
       </div>
-
       <v-spacer></v-spacer>
+      <a href="https://github.com/BriceMichalski/on-mange-quoi">
+        <v-img
+          alt="github"
+          class="shrink"
+          contains
+          src="@/assets/GitHub-Mark-Light-120px-plus.png"
+          transition="scale-transition"
+          width="40"
+        >
+        </v-img>
+      </a>
+
     </v-app-bar>
 
     <v-main >
