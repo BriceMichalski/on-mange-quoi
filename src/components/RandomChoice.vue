@@ -86,7 +86,7 @@
       // }
     },
     beforeMount(){
-      // this.choose()
+      this.choose()
       // setTimeout(() => {this.troll()},2000)
     },
   }
