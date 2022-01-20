@@ -54,40 +54,40 @@
           "salade ... mais pas ouf"
       ],
       choice: "",
-      loading: true,
+      loading: false,
       loadingMsg: "Veuillez patienter pendant la connexion au server"
     }),
     methods: {
       choose() {
         this.choice = this.options[Math.floor(Math.random()*this.options.length)]
       },
-      troll() {
-        for (let i = 0; i < 6; i++) {
-          setTimeout(() => { 
-            Api.fetch().then(
-              (data) => {
-                if(data == false){
-                  if( i < 4){
-                    let idx = i+1
-                    this.loadingMsg = "("+ idx +") Ca n'a pas marché, nouvelle tentative ... "
-                  }
-                  else if (i == 4) {
-                    this.loadingMsg = "On essaye une derniere fois ... "
-                  }
-                  else {
-                    this.loadingMsg = "Tant pis on va faire sans le back"
-                    setTimeout(() => {this.loading = false},2000)
-                  }
-                }
-              }
-            )            
-          }, 3000 * i);
-        }
-      }
+      // troll() {
+      //   for (let i = 0; i < 6; i++) {
+      //     setTimeout(() => { 
+      //       Api.fetch().then(
+      //         (data) => {
+      //           if(data == false){
+      //             if( i < 4){
+      //               let idx = i+1
+      //               this.loadingMsg = "("+ idx +") Ca n'a pas marché, nouvelle tentative ... "
+      //             }
+      //             else if (i == 4) {
+      //               this.loadingMsg = "On essaye une derniere fois ... "
+      //             }
+      //             else {
+      //               this.loadingMsg = "Tant pis on va faire sans le back"
+      //               setTimeout(() => {this.loading = false},2000)
+      //             }
+      //           }
+      //         }
+      //       )            
+      //     }, 3000 * i);
+      //   }
+      // }
     },
     beforeMount(){
-      this.choose()
-      setTimeout(() => {this.troll()},2000)
+      // this.choose()
+      // setTimeout(() => {this.troll()},2000)
     },
   }
 </script>
